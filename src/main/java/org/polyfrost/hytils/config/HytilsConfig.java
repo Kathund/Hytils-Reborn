@@ -1266,7 +1266,7 @@ public class HytilsConfig extends Config {
             save();
         }
 
-        if (gglessage == null || glMessage.isEmpty()) {
+        if (glMessage == null || glMessage.isEmpty()) {
             glMessage = "gg";
             save();
         }
