@@ -199,13 +199,12 @@ public class HytilsConfig extends Config {
     )
     public static boolean autoGL;
 
-    @Dropdown(
+    @Text(
         name = "Auto GL Phrase",
         description = "Choose what message is said.",
-        category = "Chat", subcategory = "Automatic",
-        options = {"glhf", "Good Luck", "GL", "Have a good game!", "gl", "Good luck!"}
+        category = "Chat", subcategory = "Automatic"
     )
-    public static int glPhrase = 0;
+    public static String ggMessage = "gg";
 
     @Switch(
         name = "Anti GL",
@@ -1264,6 +1263,11 @@ public class HytilsConfig extends Config {
         }
         if (ggMessage2 == null || ggMessage2.isEmpty()) {
             ggMessage2 = "Have a good day!";
+            save();
+        }
+
+        if (gglessage == null || glMessage.isEmpty()) {
+            glMessage = "gg";
             save();
         }
 

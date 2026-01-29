@@ -37,7 +37,7 @@ public class AutoGL implements ChatReceiveModule {
         String message = EnumChatFormatting.getTextWithoutFormattingCodes(event.message.getUnformattedText()).trim();
         if (message.contains(": ")) return;
         if (message.endsWith("The game starts in 5 seconds!")) {
-            Minecraft.getMinecraft().thePlayer.sendChatMessage("/ac " + getGLMessage());
+            Minecraft.getMinecraft().thePlayer.sendChatMessage("/ac " + HytilsConfig.glMessage);
         }
     }
 
