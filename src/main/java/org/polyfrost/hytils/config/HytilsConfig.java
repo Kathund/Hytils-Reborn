@@ -204,7 +204,7 @@ public class HytilsConfig extends Config {
         description = "Choose what message is said.",
         category = "Chat", subcategory = "Automatic"
     )
-    public static String ggMessage = "gg";
+    public static String glMessage = "gg";
 
     @Switch(
         name = "Anti GL",
@@ -1435,7 +1435,6 @@ public class HytilsConfig extends Config {
         addDependency("autoGGSecondPhraseDelay", "Sk1er's AutoGG Enabled", autoGGEnabled);
         addDependency("antiGG", "Sk1er's AutoGG Enabled", autoGGEnabled);
 
-        addDependency("glPhrase", "autoGL");
 
         addDependency("guildAutoWB", "autoWB");
         addDependency("friendsAutoWB", "autoWB");

@@ -28,10 +28,6 @@ import org.jetbrains.annotations.NotNull;
 public class AutoGL implements ChatReceiveModule {
     private static final String[] glmessages = {"glhf", "Good Luck", "GL", "Have a good game!", "gl", "Good luck!"};
 
-    private static String getGLMessage() {
-        return glmessages[HytilsConfig.glPhrase];
-    }
-
     @Override
     public void onMessageReceived(@NotNull ClientChatReceivedEvent event) {
         String message = EnumChatFormatting.getTextWithoutFormattingCodes(event.message.getUnformattedText()).trim();
