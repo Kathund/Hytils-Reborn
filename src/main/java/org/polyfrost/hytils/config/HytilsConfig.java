@@ -135,6 +135,12 @@ public class HytilsConfig extends Config {
     // Chat
 
     @Switch(
+        name = "auto rq",
+        category = "Chat", subcategory = "Automatic"
+    )
+    public static boolean autoRQ = true;
+
+    @Switch(
         name = "Auto GG",
         description = "Send a \"gg\" message at the end of a game.",
         category = "Chat", subcategory = "Automatic"

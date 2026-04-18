@@ -50,6 +50,7 @@ public class AutoGG implements ChatReceiveModule {
             if (HytilsConfig.autoGGSecondMessage) {
                 Multithreading.schedule(() -> UChat.say("/ac " + HytilsConfig.ggMessage2), (long) ((HytilsConfig.autoGGSecondPhraseDelay + HytilsConfig.autoGGFirstPhraseDelay) * 1000), TimeUnit.MILLISECONDS);
             }
+            if (HytilsConfig.autoRQ) Multithreading.schedule(() -> UChat.say("/requeue"), (long) (HytilsConfig.autoGGFirstPhraseDelay * 1500), TimeUnit.MILLISECONDS);
             // Schedule the reset of matchFound after the second message has been sent
             Multithreading.schedule(() -> matchFound = false, (long) ((HytilsConfig.autoGGSecondPhraseDelay + HytilsConfig.autoGGFirstPhraseDelay) * 1000) + 5000, TimeUnit.MILLISECONDS);
         }
