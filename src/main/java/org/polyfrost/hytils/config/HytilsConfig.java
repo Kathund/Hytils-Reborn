@@ -394,6 +394,13 @@ public class HytilsConfig extends Config {
     )
     public static boolean thankWatchdog;
 
+    @Text(
+        name = "than watchdog Phrase",
+        description = "Choose what message is said.",
+        category = "Chat", subcategory = "Watchdog"
+    )
+    public static String thankWatchdogMessage = "gg";
+
     @Switch(
         name = "Non Speech Cooldown",
         description = "Show the amount of time remaining until you can speak if you are a non.\n§eExample: §eYour freedom of speech is on cooldown. Please wait 3 more seconds.",
@@ -1274,6 +1281,10 @@ public class HytilsConfig extends Config {
 
         if (glMessage == null || glMessage.isEmpty()) {
             glMessage = "gg";
+            save();
+        }
+        if (thankWatchdogMessage == null || thankWatchdogMessage.isEmpty()) {
+            thankWatchdogMessage= "gg";
             save();
         }
 
